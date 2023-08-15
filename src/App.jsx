@@ -15,14 +15,14 @@ function App() {
   const registrarCorreo =async()=>{
     try {
       const { data, error } = await supabase.auth.signUp({
-        email: 'example1@email.com',
+        email: email,
         password: 'example-password1',
       })
       console.log(data)
     } catch (error) {
       console.log(error)
     }
-    console.log("correo")
+    console.log(email)
   }
   return (
     <>
